@@ -10,7 +10,6 @@ class UserHandler {
   }
 
   async postUserHanlder(request, h) {
-    console.log(request.payload);
     try {
       this._validator.validateUserPayload(request.payload);
       const { username, password, fullname } = request.payload;
